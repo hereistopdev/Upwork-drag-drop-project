@@ -1,0 +1,41 @@
+name: Puppeteer
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '**'
+
+env:
+  CI: true
+
+jobs:
+  run:
+    name: Puppeteer
+    # Run on Mac since Puppeteer snapshots were generated on a Mac.
+    # Otherwise snapshot tests will fail.
+    # https://github.com/cybersemics/em/pull/1836
+    runs-on: macos-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Set Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
+
+      - name: Serve
+        run: yarn servebuild &
+
+      - name: Test
+        run: yarn test:puppeteer
