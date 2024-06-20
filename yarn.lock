@@ -6668,10 +6668,10 @@ handlebars@^4.7.2, handlebars@^4.7.6:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-happy-dom@^14.11.4:
-  version "14.11.4"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-14.11.4.tgz#cfe683b1b2842b498f0eb540c575c1be169cfa90"
-  integrity sha512-n7p9GYkl9j5wfGtJSw3Xl0rpM2NRMIC+/WVLPi+uThI9Fe+viGnxpL4ce256LRCruvHnBWckEOm2YAyUD0hjxA==
+happy-dom@^14.12.3:
+  version "14.12.3"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-14.12.3.tgz#1b5892c670461fd1db041bee690981c22d3d521f"
+  integrity sha512-vsYlEs3E9gLwA1Hp+w3qzu+RUDFf4VTT8cyKqVICoZ2k7WM++Qyd2LwzyTi5bqMJFiIC/vNpTDYuxdreENRK/g==
   dependencies:
     entities "^4.5.0"
     webidl-conversions "^7.0.0"
